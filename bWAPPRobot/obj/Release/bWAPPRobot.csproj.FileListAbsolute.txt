@@ -1,0 +1,14 @@
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\bWAPPRobot.exe.config
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\bWAPPRobot.exe
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\bWAPPRobot.pdb
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\Newtonsoft.Json.dll
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\WebDriver.dll
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\WebDriver.Support.dll
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\Newtonsoft.Json.xml
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\WebDriver.xml
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\bin\Release\WebDriver.Support.xml
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\obj\Release\bWAPPRobot.Form1.resources
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\obj\Release\bWAPPRobot.Properties.Resources.resources
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\obj\Release\bWAPPRobot.csproj.GenerateResource.Cache
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\obj\Release\bWAPPRobot.exe
+C:\Users\Djelloul\documents\visual studio 2015\Projects\bWAPPRobot\bWAPPRobot\obj\Release\bWAPPRobot.pdb

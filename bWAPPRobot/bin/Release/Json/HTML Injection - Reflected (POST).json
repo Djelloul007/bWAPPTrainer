@@ -1,0 +1,45 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "firstname"
+      },
+      "text": "<h1>infinity</h1>"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "firstname"
+      },
+      "text": "<h1>Xploit</h1>"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "lastname"
+      },
+      "text": "<h1>infinity</h1>"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "name",
+        "value": "form"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

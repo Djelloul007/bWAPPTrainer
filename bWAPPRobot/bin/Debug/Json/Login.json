@@ -1,0 +1,48 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://is-int1.brandmaker.com/"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "userName"
+      },
+      "text": "youruserName"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "password"
+      },
+      "text": "yourpassword"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "normalLoginButton"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+	  "locator": {
+        "type": "id",
+        "value": "logoutListItem"
+      },
+      "text": "Logout"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

