@@ -37,8 +37,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
             // label1
@@ -122,21 +121,22 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://www.owasp.org";
             // 
-            // pictureBox1
+            // webBrowser1
             // 
-            this.pictureBox1.Image = global::bWAPPRobot.Properties.Resources.Main;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1537, 765);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 118);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1184, 643);
+            this.webBrowser1.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1547, 741);
-            this.Controls.Add(this.pictureBox1);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -149,7 +149,6 @@
             this.Name = "Form1";
             this.Text = "bWAPP Trainer";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +165,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

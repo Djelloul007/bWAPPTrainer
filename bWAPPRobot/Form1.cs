@@ -62,7 +62,9 @@ namespace bWAPPRobot
             if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\Picture\\" + InjectionData.InjectionDescreption))
             {
                 //MessageBox.Show(System.IO.Directory.GetCurrentDirectory() + "\\Picture\\" + InjectionData.InjectionDescreption);
-                pictureBox1.Image = Image.FromFile(System.IO.Directory.GetCurrentDirectory() + "\\Picture\\" + InjectionData.InjectionDescreption);
+                //pictureBox1.Image = Image.FromFile(System.IO.Directory.GetCurrentDirectory() + "\\Picture\\" + InjectionData.InjectionDescreption);
+                webBrowser1.Navigate(System.IO.Directory.GetCurrentDirectory() + "\\Picture\\" + InjectionData.InjectionDescreption);
+
             }
             else
             {
