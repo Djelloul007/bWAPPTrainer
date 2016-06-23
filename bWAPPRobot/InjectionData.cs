@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace bWAPPRobot
 {
-    class InjectionData
+    class  InjectionData
     {
         public static String InjectionName;
         public static String InjectionNamePosition;
@@ -28,21 +28,32 @@ namespace bWAPPRobot
         public static int SleepTimemilliseconds = 3000;
 
 
+
+
         public static void Login()
         {
+            var javaScriptDriver = (IJavaScriptExecutor)driver;
+            string highlightJavascript = @"arguments[0].style.cssText = ""border-width: 3px; border-style: solid; border-color: red"";";
+            //javaScriptDriver.ExecuteScript(highlightJavascript, new object[] { element });
+
+            int sleeptime = 2000;
             InjectionData.driver.Navigate().GoToUrl(InjectionData.baseURL + "/login.php");
             InjectionData.driver.Manage().Window.Maximize();
-            Thread.Sleep(1000);
+            Thread.Sleep(sleeptime);
+            javaScriptDriver.ExecuteScript(highlightJavascript, new object[] { InjectionData.driver.FindElement(By.Id("login")) });
             InjectionData.driver.FindElement(By.Id("login")).Clear();
             InjectionData.driver.FindElement(By.Id("login")).SendKeys(InjectionData.LoginUserName);
+            javaScriptDriver.ExecuteScript(highlightJavascript, new object[] { InjectionData.driver.FindElement(By.Id("password")) });
             InjectionData.driver.FindElement(By.Id("password")).Clear();
             InjectionData.driver.FindElement(By.Id("password")).SendKeys(InjectionData.LoginPassword);
-            Thread.Sleep(1000);
+            Thread.Sleep(sleeptime);
+            javaScriptDriver.ExecuteScript(highlightJavascript, new object[] { InjectionData.driver.FindElement(By.XPath(".//*[@id='main']/form/button")) });
             InjectionData.driver.FindElement(By.XPath(".//*[@id='main']/form/button")).Click();
 
 
-            Thread.Sleep(2000);
+            Thread.Sleep(sleeptime);
             SetInjectioncombobox(InjectionData.InjectionNamePosition);
+            Thread.Sleep(sleeptime);
 
 
         }
@@ -91,6 +102,9 @@ namespace bWAPPRobot
             }
         }
 
+
+       
+
         public static void ExcuteInjection() {
             Login();
 
@@ -101,10 +115,12 @@ namespace bWAPPRobot
 
 
             IWebElement webelement;
+            var javaScriptDriver = (IJavaScriptExecutor)driver;
+            string highlightJavascript = @"arguments[0].style.cssText = ""border-width: 3px; border-style: solid; border-color: red"";";
 
 
             #region    foreach Json Steps
-           
+
             foreach (object element in selenium.steps)
             {
                 JsonStepsHelper step = JsonConvert.DeserializeObject<JsonStepsHelper>(element.ToString());
@@ -140,13 +156,21 @@ namespace bWAPPRobot
                             break;
 
                         case "setElementText":
+                            
                             webelement = GetWebElement(step.locator.Type.ToString(), step.locator.value.ToString());
+                            //HighlighElement(driver, webelement);
+                              javaScriptDriver.ExecuteScript(highlightJavascript, new object[] { webelement });
+
                             webelement.Clear();
                             webelement.SendKeys(step.text.ToString());
                             Thread.Sleep(SleepTimemilliseconds);
                             break;
                         case "clickElement":
                             webelement = GetWebElement(step.locator.Type.ToString(), step.locator.value.ToString());
+                            //HighlighElement(driver, webelement);
+                            javaScriptDriver.ExecuteScript(highlightJavascript, new object[] { webelement });
+                            Thread.Sleep(SleepTimemilliseconds);
+
                             webelement.Click();
                             Thread.Sleep(SleepTimemilliseconds);
                             break;
@@ -165,9 +189,23 @@ namespace bWAPPRobot
                             break;
 
                         case "verifyTextPresent":
-                            Thread.Sleep(SleepTimemilliseconds);
+
+                            try
+                            {
+                                Thread.Sleep(SleepTimemilliseconds);
+                                webelement = GetWebElement(step.locator.Type.ToString(), step.locator.value.ToString());
+                                //HighlighElement(driver, webelement);
+                                javaScriptDriver.ExecuteScript(highlightJavascript, new object[] { webelement });
+                                Thread.Sleep(SleepTimemilliseconds);
+
+                            }
+                            catch
+                            {
+                            }
                            
-                            break;
+
+                                break;
+                           
 
                         case "storeTitle":
                             Thread.Sleep(SleepTimemilliseconds);
